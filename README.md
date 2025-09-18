@@ -1,4 +1,4 @@
-![DCA](img.png)
+![DCA](img.jpg)
 
 
 

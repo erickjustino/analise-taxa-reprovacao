@@ -1,5 +1,5 @@
 ![DCA](img.jpg)
-# Análise de Grafos da Taxa de Reprovação dos Cursos da UFRN.
+# Análise da Taxa de Reprovação na UFRN com Grafos.
 
 
 

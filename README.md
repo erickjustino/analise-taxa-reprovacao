@@ -1,52 +1,110 @@
 ![DCA](img.jpg)
-# Análise da Taxa de Reprovação dos Cursos da UFRN com Grafos.
+# 🌐 Análise da Taxa de Reprovação dos Cursos da UFRN com Grafos
+
+![GitHub language count](https://img.shields.io/github/languages/count/seu-usuario/seu-repositorio?color=blue)
+![GitHub top language](https://img.shields.io/github/languages/top/seu-usuario/seu-repositorio?color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/seu-repositorio)
+
+---
 
 ## 📝 Descrição do Projeto
 
-Este projeto tem como finalidade explorar e analisar os dados de matrículas e reprovações em diversos cursos da **Universidade Federal do Rio Grande do Norte (UFRN)**. Utilizando a teoria dos grafos, buscamos modelar a relação entre os cursos e identificar padrões, gargalos e conexões que possam explicar as taxas de reprovação em diferentes áreas, abrangendo desde cursos técnicos e de graduação até pós-graduação (mestrado e doutorado).
+Este projeto realiza uma análise aprofundada dos dados de matrículas e reprovações nos cursos da **Universidade Federal do Rio Grande do Norte (UFRN)**. Utilizando a teoria dos grafos, o estudo modela a relação entre os diversos cursos (graduação, técnicos, etc.) para identificar padrões e conexões que possam explicar as taxas de reprovação.
+
+A análise transforma uma massa de dados acadêmicos em uma visualização de rede, permitindo a identificação de cursos que funcionam como "hubs" de reprovação e grupos de cursos (clusters) com desafios sistêmicos semelhantes.
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivos
 
-O principal objetivo é transformar uma grande massa de dados acadêmicos em uma visualização de rede (grafo) que nos permita extrair insights, tais como:
-- Identificar os cursos com maiores índices de reprovação.
-- Modelar como os cursos se conectam, seja por fluxo de alunos ou correlação acadêmica.
-- Visualizar a estrutura da "rede de reprovação" da universidade para encontrar pontos críticos.
+O principal objetivo é responder às seguintes perguntas:
 
----
-
-## 🗂️ Base de Dados
-
-A base de dados utilizada foi construída a partir de fontes públicas de dados da UFRN, consolidando informações sobre matrículas e reprovações em um único dataset.
-
-As colunas abaixo representam uma amostra do dataset final, que exibiu os **19 cursos com o maior número absoluto de reprovações** para uma análise inicial e validação do tratamento dos dados. O dataset completo inclui uma quantidade muito maior de cursos.
-
-As colunas principais são:
-- `curso`: Nome do curso.
-- `matriculas`: Número total de matrículas no período analisado.
-- `reprovacoes`: Número absoluto de reprovações.
-- `taxa_reprovacao`: A razão entre o número de reprovações e o de matrículas.
+* **Identificação:** Quais cursos possuem os maiores índices de reprovação?
+* **Conexão:** Como os cursos se relacionam com base na similaridade de suas taxas de reprovação?
+* **Visualização:** Como a "rede de reprovação" da universidade está estruturada e onde estão seus pontos mais críticos?
 
 ---
 
 ## 🛠️ Metodologia
 
-A análise foi conduzida seguindo os seguintes passos:
+A análise foi conduzida em um notebook Jupyter (`.ipynb`), seguindo os seguintes passos:
 
-1.  **Coleta e Tratamento dos Dados:** Extração, limpeza e organização dos dados para criar o dataset principal.
-2.  **Modelagem do Grafo:**
-    * **Vértices (Nós):** Cada curso da UFRN é representado por um nó no grafo.
-3.  **Análise e Visualização:**
+1.  **Coleta e Tratamento dos Dados:**
+    * Carga de 7 arquivos `.csv` com dados públicos da UFRN.
+    * Limpeza e normalização dos dados, com destaque para a criação de uma flag `reprovado` para facilitar os cálculos.
+    * Padronização dos nomes das colunas para garantir consistência.
+
+2.  **Análise e Agregação:**
+    * Criação de rankings de reprovação por disciplina, por disciplina/curso e, finalmente, um ranking consolidado por curso.
+
+3.  **Modelagem e Análise do Grafo:**
+    * **Nós (Vértices):** Cada curso é representado por um nó.
+    * **Arestas (Conexões):** Uma aresta ponderada é criada entre dois cursos se suas taxas de reprovação forem similares (com uma diferença abaixo de um limiar pré-definido). O peso da aresta indica o quão forte é essa similaridade.
+    * **Métricas de Rede:** Análise de métricas como **densidade, grau médio e assortatividade** para entender a estrutura e a coesão da rede.
+
+4.  **Visualização de Dados:**
+    * Criação de um grafo 2D interativo onde o **tamanho dos nós** representa o número absoluto de reprovações e a **cor** indica a taxa de reprovação.
+    * Geração de um **histograma de distribuição de graus** para visualizar a conectividade dos cursos.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 📊 Principais Resultados
 
-- **Linguagem:** Python 3
-- **Bibliotecas:**
-    - `Pandas` para manipulação e tratamento dos dados.
-    - `NetworkX` para a criação, manipulação e estudo da estrutura do grafo.
+A análise revelou que o problema de reprovação **não se concentra em cursos isolados**, mas sim em um **grupo coeso e densamente conectado** de cursos com perfis de reprovação semelhantes.
+
+A alta **assortatividade (0.6577)** indica a formação de um **"núcleo duro"**, onde cursos com muitas conexões (hubs) tendem a se conectar entre si, formando o epicentro do problema.
+
+| Métrica | Valor | Interpretação |
+| :--- | :--- | :--- |
+| **Nós (Cursos)** | 30 | Foco nos 30 cursos com maior número de reprovações. |
+| **Arestas (Conexões)**| 122 | Rede densamente conectada. |
+| **Grau Médio** | 8.13 | Em média, cada curso é similar a outros 8 cursos. |
+| **Assortatividade** | 0.6577 | Cursos problemáticos tendem a se conectar entre si. |
+
+### Visualizações
+
+**Grafo 2D dos Cursos:**
+*(Aqui você pode colocar a imagem do seu grafo 2D)*
+![Grafo de Cursos](caminho/para/sua/imagem_do_grafo.png)
+
+**Histograma de Distribuição de Graus:**
+*(Aqui você pode colocar a imagem do seu histograma)*
+![Histograma de Graus](caminho/para/sua/imagem_do_histograma.png)
+
 ---
 
-> Projeto desenvolvido para a 1º unidade da disciplina de  Algoritmos e Estrutura de Dados II - DCA/UFRN
+## 🚀 Como Executar o Projeto
+
+Para replicar esta análise, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    cd seu-repositorio
+    ```
+
+2.  **Abra o Notebook:**
+    * Faça o upload do arquivo `AnaliseReprovacao.ipynb` para o [Google Colab](https://colab.research.google.com/).
+
+3.  **Execute a Célula de Upload:**
+    * Rode a primeira célula de código e faça o upload dos 7 arquivos `.csv` necessários quando solicitado.
+
+4.  **Execute as Células:**
+    * Execute todas as células na sequência para reproduzir os rankings e as visualizações.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Linguagem:** `Python 3`
+* **Ambiente:** `Google Colab`
+* **Bibliotecas Principais:**
+    * `Pandas`: Para manipulação e tratamento dos dados.
+    * `NetworkX`: Para a criação, manipulação e estudo da estrutura do grafo.
+    * `Matplotlib`: Para a geração dos gráficos estáticos.
+    * `Plotly`: Para visualizações interativas (não incluído no README final, mas usado no processo).
+    * `adjustText`: Para melhorar a legibilidade dos rótulos no grafo.
+
+---
+
+> Este projeto foi desenvolvido para a 1ª unidade da disciplina de Algoritmos e Estrutura de Dados II (DCA/UFRN).

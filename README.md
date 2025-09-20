@@ -74,7 +74,7 @@ Para replicar esta análise, siga os passos abaixo:
     ```
 
 2.  **Abra o Notebook:**
-    * Faça o upload do arquivo `manipulação_dos_dados_e_visualização.ipynb` para o [Google Colab](https://colab.research.google.com/).
+    * Faça o upload do arquivo `manipulação dos dados e visualização2d e 3d.ipynb` para o [Google Colab](https://colab.research.google.com/).
 
 3.  **Execute a Célula de Upload:**
     * Rode a primeira célula de código e faça o upload dos 7 arquivos `.csv` necessários quando solicitado.

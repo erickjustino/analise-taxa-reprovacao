@@ -1,12 +1,6 @@
 ![DCA](img.jpg)
 # 🌐 Análise da Taxa de Reprovação dos Cursos da UFRN com Grafos
 
-![GitHub language count](https://img.shields.io/github/languages/count/seu-usuario/seu-repositorio?color=blue)
-![GitHub top language](https://img.shields.io/github/languages/top/seu-usuario/seu-repositorio?color=blue)
-![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/seu-repositorio)
-
----
-
 ## 📝 Descrição do Projeto
 
 Este projeto realiza uma análise aprofundada dos dados de matrículas e reprovações nos cursos da **Universidade Federal do Rio Grande do Norte (UFRN)**. Utilizando a teoria dos grafos, o estudo modela a relação entre os diversos cursos (graduação, técnicos, etc.) para identificar padrões e conexões que possam explicar as taxas de reprovação.

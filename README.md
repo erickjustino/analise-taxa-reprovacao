@@ -58,12 +58,10 @@ A alta **assortatividade (0.6577)** indica a formação de um **"núcleo duro"**
 ### Visualizações
 
 **Grafo 2D dos Cursos:**
-*(Aqui você pode colocar a imagem do seu grafo 2D)*
-![Grafo de Cursos](caminho/para/sua/imagem_do_grafo.png)
+![Grafo de Cursos](Imagens/grafo2d.png)
 
 **Histograma de Distribuição de Graus:**
-*(Aqui você pode colocar a imagem do seu histograma)*
-![Histograma de Graus](caminho/para/sua/imagem_do_histograma.png)
+![Histograma de Graus](Imagens/histograma.png)
 
 ---
 

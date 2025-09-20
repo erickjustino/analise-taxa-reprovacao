@@ -1,4 +1,4 @@
-![DCA](img.jpg)
+![DCA](imagens/img.jpg)
 # 🌐 Análise da Taxa de Reprovação dos Cursos da UFRN com Grafos
 
 ## 📝 Descrição do Projeto

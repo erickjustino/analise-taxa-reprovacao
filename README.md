@@ -77,7 +77,7 @@ Para replicar esta análise, siga os passos abaixo:
     * Faça o upload do arquivo `manipulação dos dados e visualização2d e 3d.ipynb` para o [Google Colab](https://colab.research.google.com/).
 
 3.  **Execute a Célula de Upload:**
-    * Rode a primeira célula de código e faça o upload dos 7 arquivos `.csv` necessários quando solicitado.
+    * Rode a primeira célula de código e, quando solicitado, faça o upload dos 7 arquivos .csv. Atenção: os arquivos estão em uma pasta .zip e precisam ser descompactados primeiro.
 
 4.  **Execute as Células:**
     * Execute todas as células na sequência para reproduzir os rankings e as visualizações.

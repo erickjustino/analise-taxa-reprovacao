@@ -37,9 +37,7 @@ A análise foi conduzida em um notebook Jupyter (`.ipynb`), seguindo os seguinte
     * **Métricas de Rede:** Análise de métricas como **densidade, grau médio e assortatividade** para entender a estrutura e a coesão da rede.
 
 4.  **Visualização de Dados:**
-    * Criação de um grafo 2D interativo onde o **tamanho dos nós** representa o número absoluto de reprovações e a **cor** indica a taxa de reprovação.
-    * Geração de um **histograma de distribuição de graus** para visualizar a conectividade dos cursos.
-
+    * Criação de um grafo 2D interativo e 3D onde o **tamanho dos nós** representa o número absoluto de reprovações e a **cor** indica a taxa de reprovação.
 ---
 
 ## 📊 Principais Resultados

@@ -94,4 +94,4 @@ Para replicar esta análise, siga os passos abaixo:
 
 ---
 
-> Este projeto foi desenvolvido para a 1ª unidade da disciplina de Algoritmos e Estrutura de Dados II (DCA/UFRN).
+> Este projeto foi desenvolvido por Erick Vinicius Justino da Silva e Leonardo Pessoa Cavalcanti para a 1ª unidade da disciplina de Algoritmos e Estrutura de Dados II (DCA/UFRN).
